@@ -1,0 +1,506 @@
+# ====================================================================
+# Mihomo/Clash 配置文件
+# 基于 Aethersailor/Custom_OpenClash_Rules 订阅转换模板生成
+# ====================================================================
+
+# ----------------------------------------
+# 代理组 (Proxy Groups)
+# ----------------------------------------
+proxy-groups:
+  # === 应用场景分组 (Select) ===
+  - name: 💬 即时通讯
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+
+  - name: 🌐 社交媒体
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+
+  - name: 🚀 GitHub
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+  - name: 🤖 ChatGPT
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - DIRECT # 避免遗漏，添加 DIRECT
+
+  - name: 🤖 Copilot
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+
+  - name: 🤖 AI服务
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - DIRECT # 避免遗漏，添加 DIRECT
+
+  - name: 🎶 TikTok
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - DIRECT # 避免遗漏，添加 DIRECT
+
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+
+
+  - name: 🎥 Emby
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+  - name: 📺 Bahamut
+    type: select
+    proxies:
+      - 🇼🇸 台湾节点
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+
+  - name: 🌎 国外媒体
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+      - DIRECT # 避免遗漏，添加 DIRECT
+
+  - name: 🛒 国外电商
+    type: select
+    proxies:
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+      - DIRECT # 避免遗漏，添加 DIRECT
+
+  - name: 🇬 谷歌服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - 🎯 全球直连
+
+
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+
+
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+      - DIRECT # 避免遗漏，添加 DIRECT
+
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+
+
+  - name: 🎮 Steam
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🚀 手动选择
+
+ 
+   # === 核心调度组 ===
+  # ♻️ 自动选择 (Url-Test 自动测速)
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+
+  # 🎯 全球直连 (只包含 DIRECT)
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+  
+  # 🚀 手动选择 (主手动切换组，包含所有地区和自动选择)
+  - name: 🚀 手动选择
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+
+
+  # 🐟 遵循规则 (作为 🔀 非标端口 的备选)
+  - name: 🐟 遵循规则
+    type: select
+    proxies:
+      - 🐟 漏网之鱼
+
+  # 🔀 非标端口 (您的 PT/BT 优化组)
+  - name: 🔀 非标端口
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🐟 遵循规则
+
+  # 🐟 漏网之鱼 (最终兜底组)
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 手动选择
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇼🇸 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌐 其他地区
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - DIRECT # 避免遗漏，添加 DIRECT
+      
+     
+  # === 核心区域节点组 (基于url-test的测速选择) ===
+  # 🇭🇰 香港节点
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(港|HK|hk|Hong Kong|HongKong|hongkong|深港)
+  
+  # 🇺🇸 美国节点
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\bUS\b|USA|United States|UnitedStates)
+
+  # 🇯🇵 日本节点
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵)
+
+  # 🇸🇬 新加坡节点
+  - name: 🇸🇬 新加坡节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(新加坡|坡|狮城|SG|Singapore)
+  
+  # 🇼🇸 台湾节点 (将您的 🇼🇸 旗帜保留，并使用 url-test 逻辑)
+  - name: 🇼🇸 台湾节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(台|新北|彰化|TW|Taiwan)
+
+  # 🇰🇷 韩国节点
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(KR|Korea|KOR|首尔|韩|韓)
+  
+  # 🌐 其他地区 (Select 过滤逻辑在标准 YAML 中需依赖外部脚本或不支持)
+  # 在标准 YAML 中，通常需要通过 'include-all: true' 结合 'filter' 来排除上述区域。
+  # 这里的实现方式是 Select，让用户手动选择节点，或通过订阅脚本保证节点不重复。
+  # 由于无法在标准的YAML中用 Select+RegExp 过滤未命中的节点，这里仅作为Select组。
+  - name: 🌐 其他地区
+    type: select
+    include-all: true
+    # 您的过滤逻辑保持不变，用于排除所有已分类的地区节点
+    filter: (^(?!.*(港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\bUS\b|USA|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|日期|过期|流量|expire|traffic)).*)
+
+    
+
+
+# ----------------------------------------
+# 规则提供者 (Rule Providers)
+# ----------------------------------------
+rule-providers:
+  Custom_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml
+    path: ./ruleset/Custom_Direct.yaml
+    interval: 28800
+    format: text
+
+  Custom_Proxy:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml
+    path: ./ruleset/Custom_Proxy.yaml
+    interval: 28800
+    format: text
+
+  Steam_CDN:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
+    path: ./ruleset/Steam_CDN.yaml
+    interval: 28800
+    format: text
+    
+  Custom_Port_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
+    path: ./ruleset/Custom_Port_Direct.yaml
+    interval: 28800
+    format: text
+
+
+# ----------------------------------------
+# 规则 (Rules)
+# ----------------------------------------
+rules:
+  # 本地地址和域名直连
+  - GEOSITE,private,🎯 全球直连
+  - GEOIP,private,🎯 全球直连,no-resolve
+  # 本项目收录的直连规则
+  - RULE-SET,Custom_Direct,🎯 全球直连
+  # 本项目收录的代理规则
+  - RULE-SET,Custom_Proxy,🚀 手动选择
+  # 谷歌在国内可用的域名直连
+  - GEOSITE,google-cn,🎯 全球直连
+  # 国内游戏域名直连
+  - GEOSITE,category-games@cn,🎯 全球直连
+  # Steam 下载 CDN 直连
+  - RULE-SET,Steam_CDN,🎯 全球直连
+  # 各大游戏平台下载域名直连
+  - GEOSITE,category-game-platforms-download,🎯 全球直连
+  # BT Tracker 相关域名直连
+  - GEOSITE,category-public-tracker,🎯 全球直连
+  
+  # 即时通讯
+  - GEOSITE,category-communication,💬 即时通讯
+  # 社交媒体
+  - GEOSITE,category-social-media-!cn,🌐 社交媒体
+  # AI 服务
+  - GEOSITE,openai,🤖 ChatGPT
+  - GEOSITE,bing,🤖 Copilot
+  - GEOSITE,category-ai-!cn,🤖 AI服务
+  # 其他服务
+  - GEOSITE,github,🚀 GitHub
+  - GEOSITE,steam,🎮 Steam
+  - GEOSITE,youtube,📹 YouTube
+  - GEOSITE,apple,🍎 苹果服务
+  - GEOSITE,microsoft,Ⓜ️ 微软服务
+  - GEOSITE,googlefcm,📢 谷歌FCM
+  - GEOSITE,google,🇬 谷歌服务
+  - GEOSITE,tiktok,🎶 TikTok
+  - GEOSITE,netflix,🎥 Netflix
+  - GEOSITE,category-emby,🎥 Emby
+  - GEOSITE,bahamut,📺 Bahamut
+  - GEOSITE,category-games,🎮 游戏平台
+  - GEOSITE,category-entertainment,🌎 国外媒体
+  - GEOSITE,category-ecommerce,🛒 国外电商
+  # GFW 列表走手动选择
+  - GEOSITE,gfw,🚀 手动选择
+  
+  # GEOIP 规则
+  - GEOIP,telegram,💬 即时通讯,no-resolve
+  - GEOIP,twitter,🌐 社交媒体,no-resolve
+  - GEOIP,facebook,🌐 社交媒体,no-resolve
+  - GEOIP,google,🇬 谷歌服务,no-resolve
+  - GEOIP,netflix,🎥 Netflix,no-resolve
+  
+  # 国内兜底
+  - GEOSITE,cn,🎯 全球直连
+  - GEOIP,cn,🎯 全球直连,no-resolve
+  
+  # 非标端口 (PT/BT 优化)
+  - RULE-SET,Custom_Port_Direct,🔀 非标端口
+
+  # 最终兜底规则
+  - MATCH,🐟 漏网之鱼
