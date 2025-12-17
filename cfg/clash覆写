@@ -60,7 +60,8 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
-      - DIRECT # 避免遗漏，添加 DIRECT
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
   - name: 🤖 Copilot
     type: select
@@ -75,6 +76,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 手动选择
       - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   - name: 🤖 AI服务
@@ -89,7 +92,8 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
-      - DIRECT # 避免遗漏，添加 DIRECT
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
   - name: 🎶 TikTok
     type: select
@@ -104,6 +108,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 手动选择
       - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   - name: 📹 YouTube
@@ -118,7 +124,8 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
-      - DIRECT # 避免遗漏，添加 DIRECT
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
   - name: 🎥 Netflix
     type: select
@@ -132,6 +139,8 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   - name: 🎥 Emby
@@ -147,6 +156,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 手动选择
       - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
   - name: 📺 Bahamut
     type: select
@@ -154,6 +165,8 @@ proxy-groups:
       - 🇼🇸 台湾节点
       - 🚀 手动选择
       - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   - name: 🌎 国外媒体
@@ -169,7 +182,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 手动选择
       - 🎯 全球直连
-      - DIRECT # 避免遗漏，添加 DIRECT
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
   - name: 🛒 国外电商
     type: select
@@ -184,6 +198,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 手动选择
       - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   - name: 📢 谷歌FCM
@@ -244,7 +260,6 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
-      - DIRECT # 避免遗漏，添加 DIRECT
 
   - name: 🎮 游戏平台
     type: select
@@ -259,6 +274,8 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   - name: 🎮 Steam
@@ -274,6 +291,8 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🚀 手动选择
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
  
    # === 核心调度组 ===
@@ -303,6 +322,8 @@ proxy-groups:
       - 🇰🇷 韩国节点
       - 🌐 其他地区
       - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
 
   # 🐟 遵循规则 (作为 🔀 非标端口 的备选)
@@ -332,7 +353,6 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
       - 🎯 全球直连
-      - DIRECT # 避免遗漏，添加 DIRECT
       
      
   # === 核心区域节点组 (基于url-test的测速选择) ===
