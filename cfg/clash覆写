@@ -1,3 +1,23 @@
+proxy-providers:
+  huayun:
+    url: https://api-huacloud.dev/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS.yaml&url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Ftoken2%3Dy968w64q-65acdda5fbsptkl5yw%26sip002%3D1
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+unified-delay: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+
 # ====================================================================
 # Mihomo/Clash 配置文件
 # 基于 Aethersailor/Custom_OpenClash_Rules 订阅转换模板生成
@@ -11,6 +31,7 @@ proxy-groups:
   - name: 💬 即时通讯
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
@@ -37,6 +58,7 @@ proxy-groups:
   - name: 🚀 GitHub
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
@@ -115,6 +137,7 @@ proxy-groups:
   - name: 📹 YouTube
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
@@ -146,6 +169,7 @@ proxy-groups:
   - name: 🎥 Emby
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
       - 🇺🇸 美国节点
@@ -172,6 +196,7 @@ proxy-groups:
   - name: 🌎 国外媒体
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
       - 🇺🇸 美国节点
@@ -236,6 +261,7 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
+      - 🧬 实验性节点
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
       - 🇺🇸 美国节点
@@ -251,6 +277,7 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
+      - 🧬 实验性节点
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
       - 🇺🇸 美国节点
@@ -282,6 +309,7 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
+      - 🧬 实验性节点
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
       - 🇺🇸 美国节点
@@ -303,6 +331,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     include-all: true
+    exclude-filter: (?i)(日期|过期|到期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率|套餐)
 
   # 🎯 全球直连 (只包含 DIRECT)
   - name: 🎯 全球直连
@@ -314,6 +343,7 @@ proxy-groups:
   - name: 🚀 手动选择
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
@@ -323,7 +353,7 @@ proxy-groups:
       - 🌐 其他地区
       - ♻️ 自动选择
     include-all: true
-    exclude-filter: (?i)(日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
+    exclude-filter: (?i)(日期|过期|到期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率|套餐)
 
 
   # 🐟 遵循规则 (作为 🔀 非标端口 的备选)
@@ -343,6 +373,7 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
+      - 🧬 实验性节点
       - 🚀 手动选择
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
@@ -356,6 +387,14 @@ proxy-groups:
       
      
   # === 核心区域节点组 (基于url-test的测速选择) ===
+  # 🧬 实验性节点
+  - name: 🧬 实验性节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: (?i)(实验)
   # 🇭🇰 香港节点
   - name: 🇭🇰 香港节点
     type: url-test
@@ -418,7 +457,7 @@ proxy-groups:
     type: select
     include-all: true
     proxies: []      
-    exclude-filter: (?i)(港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\bUS\b|USA|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|日期|过期|到期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
+    exclude-filter: (?i)(港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\bUS\b|USA|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|日期|过期|流量|expire|traffic|剩余|GB|TB|Countdown|剩余流量|倍率)
 
     
 
