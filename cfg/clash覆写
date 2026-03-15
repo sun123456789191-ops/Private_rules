@@ -373,7 +373,6 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - 🧬 实验性节点
       - 🚀 手动选择
       - 🇯🇵 日本节点
       - 🇭🇰 香港节点
